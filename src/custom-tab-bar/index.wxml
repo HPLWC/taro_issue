@@ -1,0 +1,9 @@
+<view class="tab-bar">
+  <view class="tab-bar-wrapper" wx:for="{{ list }}" bindtap="handleClick" data-path="{{ item.pagePath }}"
+    data-key="{{ index }}" wx:key="index">
+    <image class="tab-bar-icon" src="{{selected === index ? item.selectedIconPath : item.iconPath}}">
+    </image>
+    <view class="tab-bar-label {{ selected === index && 'selected' }}"
+      style="color: {{ selected === index ? selectedColor : color }}">{{item.text}}{{selected}}</view>
+  </view>
+</view>
